@@ -15,6 +15,11 @@
   "author": "winsen",
   "license": "ISC",
   "dependencies": {
+    "@babel/parser": "^7.7.3",
+    "babel-generator": "^6.26.1",
+    "babel-template": "^6.26.0",
+    "babel-traverse": "^6.26.0",
+    "babylon": "^6.18.0",
     "fs-extra": "^8.1.0"
   }
 }

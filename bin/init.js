@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const createProject = require('../lib/create-project')
-const addRoute = require('../lib/add-route')
+const addPages = require('../lib/add-pages/index')
 const argv = process.argv.slice(2)
 
 const command = argv[0]
@@ -11,8 +11,10 @@ async function handleCommand() {
     case 'create':
       await createProject(argv[1])
       break
-    case 'add-route':
-      await addRoute(argv.slice(1))
+    case 'add-pages':
+      await addPages(argv.slice(1)).catch(err => {
+        console.log(err)
+      })
       break
     default:
       break
